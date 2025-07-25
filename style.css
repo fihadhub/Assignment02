@@ -5,6 +5,9 @@
 span{
     color: #E95A08;
 }
+button:hover{
+    background-color: black;
+}
 .noto-serif{
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
@@ -43,6 +46,30 @@ span{
 .text{
     color: #8987A1;
 }
+@media screen and (max-width: 576px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 60px;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 0; 
+  }
+
+  .rli {
+    display: none;
+  }
+
+  .navimg img {
+    width: 80px; 
+    height: auto;
+  }
+
+}
+
 /* banner-section */
 .banner{
     max-width: 1140px;
@@ -69,6 +96,39 @@ span{
     font-size: 1.2rem;
     line-height: 22px;
 }
+@media screen and (max-width: 576px) {
+  .banner {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 20px;
+    margin-bottom: 60px;
+  }
+
+  .banner-img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .banner-text {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .banner-subtitle {
+    font-size: 1rem;
+    line-height: 20px;
+  }
+}
+
 /* Our-Plants */
 .our-plants{
     max-width: 1140px;
@@ -98,30 +158,58 @@ span{
     border: none;
     color:#FFFFFF ;
 }
-/* plants-lover */
-.plants-lover{
-    max-width: 1140px;
-    max-height: 597px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 130px;
+@media screen and (max-width: 576px) {
+  .container {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .card {
+    width: calc(50% - 10px);
+  }
+
+  .our-title {
+    font-size: 2rem;
+  }
+
+  .our-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .cart {
+    font-size: 0.9rem;
+  }
 }
-.flower{
-    max-width: 540px;
-    max-height: 521px;
+
+.plants-lover {
+  max-width: 1140px;
+  height: 597px;
+  margin: 0 auto 130px auto;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-.badge-img{
-    width: 286px;
-    height: 286px;
-    position: absolute;
-    top:-110px;
-    left: 370px;
-    border-radius: 50%;
-    filter: drop-shadow(-4px 10px 3px rgba(0, 0, 0, 0.4));
-    animation: spin 5s linear infinite;   
+
+.lover-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
+
+.badge-img {
+  width: 286px;
+  height: 286px;
+  position: absolute;
+  top: -110px;
+  left: 370px;
+  border-radius: 50%;
+  filter: drop-shadow(-4px 10px 3px rgba(0, 0, 0, 0.4));
+  animation: spin 5s linear infinite;
+  z-index: 1;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -130,21 +218,68 @@ span{
     transform: rotate(360deg);
   }
 }
-.flower{
-    box-sizing: border-box;
-    margin-left: 90px;
+
+.flower {
+  max-width: 540px;
+  max-height: 521px;
+  box-sizing: border-box;
+  margin-left: 90px;
 }
-.flower-title{
-    font-size: 3rem;
-    margin-bottom: 15px;
+
+.flower-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
-.description{
-    font-size: 1.2rem;
-    color: #8987A1;
-    line-height: 20px;
-    margin-bottom: 15px;
-    margin-left: 25px;
+
+.description {
+  font-size: 1.2rem;
+  color: #8987A1;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  margin-left: 25px;
 }
+
+@media screen and (max-width: 576px) {
+  .plants-lover {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    height: auto;
+    position: static;
+    margin-top: 900px;
+  }
+
+  .lover-img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .lover-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .flower {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .badge-img {
+    display: none;
+  }
+
+  .flower-title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-left: 15px;
+    line-height: 1.5;
+  }
+}
+
+
 /* latest-deal */
 .latest-deal{
     max-width: 1440px;
@@ -223,6 +358,36 @@ span{
     color: #FFFFFF;
     text-decoration: underline;
 }
+@media screen and (max-width: 576px) {
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .img {
+    height: 250px; 
+    margin-bottom: 20px;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  .box2 {
+    grid-row: auto;
+  }
+
+  .box3 {
+    grid-row: auto;
+  }
+}
+
 /* join-bunch*/
 .join-bunch{
     max-width: 1440px;
@@ -256,14 +421,102 @@ span{
      color: #FFFFFF;
 
 }
+@media (max-width: 576px) {
+  .join-bunch {
+    height: auto;
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .join-box {
+    width: 100%;
+  }
+
+  .join-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .user {
+    width: 218px;
+    height: 45px;
+    margin-bottom: 12px;
+    margin-left: 80px;
+  }
+
+  .join-button {
+    width: 113px;
+    height: 45px;
+  }
+}
+
 /* footer */
 .footer{
     max-width: 1440px;
     height: 348px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .footer-subtitle{
-    
+    font-size: 1.2rem;
+    color: #8987A1;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.footer-two{
+    text-decoration: none;
+}
+.footer-link{
+    text-decoration: none;
+    color: #6B7280;
+}
+.footer-four{
+    display: contents;
+}
+
+@media (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .footer-one img.footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .footer-subtitle {
+    font-size: 1rem;
+    line-height: 22px;
+  }
+
+  .footer-two,
+  .footer-three {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-link {
+    font-size: 1rem;
+  }
+
+  .footer-four {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 10px;
+  }
+
+  .footer-four a img {
+    width: 24px;
+    height: 24px;
+  }
 }
