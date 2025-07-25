@@ -163,11 +163,14 @@ button:hover{
     justify-content: center;
     gap: 16px;
   }
-
   .card {
     width: calc(50% - 10px);
-  }
+    box-sizing: border-box;
 
+  }
+  .card-img{
+    width: 230px;
+  }
   .our-title {
     font-size: 2rem;
   }
