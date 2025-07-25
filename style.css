@@ -389,6 +389,16 @@ button:hover{
   .box3 {
     grid-row: auto;
   }
+  .box-title-l{
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    margin-bottom: 0;
+  }
+  .box-button-l{
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
 }
 
 /* join-bunch*/
